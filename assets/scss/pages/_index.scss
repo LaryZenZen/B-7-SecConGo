@@ -58,4 +58,34 @@
 // chairperson開始
 .chairperson {
     padding: 120px 0;
+    .index-title {
+        margin-bottom: 54px;
+    }
+    .chairperson-background-text {
+        font-size: 72px;
+        font-weight: 400;
+        color: $neutral-200;
+        bottom: 16px;
+        left: 0;
+        z-index: -1;
+    }
+}
+
+// .sponsor開始
+.sponsor {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    .index-title {
+        margin-bottom: 54px;
+        p {
+            z-index: 1;
+        }
+    }
+    .sponsor-background-text {
+        font-size: 72px;
+        font-weight: 400;
+        bottom: 16px;
+        left: 0;
+        z-index: 0;
+    }
 }

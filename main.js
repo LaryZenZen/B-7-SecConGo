@@ -16,7 +16,6 @@ const swiper = new Swiper('.mySwiper', {
         disableOnInteraction: false,
     },
 });
-// co-chair swiper
 document.addEventListener('DOMContentLoaded', function() {
     // 初始化 Banner 區域的 Swiper
     var bannerSwiper = new Swiper('.mySwiper', {
@@ -33,17 +32,20 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 });
-// co-chair swiper
-const coChairSwiper = new Swiper('.coChairSwiper', {
-    slidesPerView: 3, // 顯示3個slide
-    // spaceBetween: 30, // Slide之間的距離
+// 只初始化一次 co-chair 的 swiper
+const coChairSwiper = new Swiper('.co-chair .coChairSwiper', {
+    slidesPerView: 3,
     loop: true,
-
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.co-chair .swiper-button-next',
+        prevEl: '.co-chair .swiper-button-prev',
+    },
+    pagination: {
+        el: '.co-chair .swiper-pagination',
+        clickable: true,
     },
 });
+
 
 // 登入頁面跳轉
 // 在 DOM 完全載入後才添加事件監聽器
